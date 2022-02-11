@@ -1,0 +1,31 @@
+To create a node, use this block
+[img]
+Here's what each input is for (options with * are not required)
+
+- pos: The (x, y) of the node
+  - values
+    1. The x-position of the node (must be a number)
+	2. the y-position of the node (must be a number)
+	- Default value: (0, 0)
+- id: The id of the node
+  - value
+    - The id of the node. (any text)
+- title: The title of the node
+  - value
+    - The title of the node (top text). (any text)
+- inputs/outputs: The inputs/outputs of the node
+  - value
+    Each input/output is seperated by a semi-colon (;), and you can set an input/output type by putting it in brakets. For example
+	[code]
+	input-1;editable input[edit]
+    [/code]
+	Makes 2 inputs/outputs, the first one, nothing special.
+	The second one is an input you can edit.
+	
+	You can also use curly brakets {} to make a default value. For example,
+	[code]
+	input-1[edit]{default}
+	[/code]
+	Makes an editable input that has the default value of "default".
+	
+	Scroll down for a list of input/output types.
