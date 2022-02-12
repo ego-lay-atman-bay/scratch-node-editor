@@ -1,4 +1,25 @@
-document.body.onload = loadProject(2.2);
+const queryString = window.location.search;
+console.log(queryString);
+
+const urlParams = new URLSearchParams(queryString);
+
+var version
+if (urlParams.has('version')) {
+    version = urlParams.get('version')
+    loadProject(version)
+} else {
+    document.body.onload = loadProject(2.2);
+    version = "2.2"
+}
+
+var mySelect = document.getElementById('ver-selector');
+
+for(var i, j = 0; i = mySelect.options[j]; j++) {
+    if(i.value == version) {
+        mySelect.selectedIndex = j;
+        break;
+    }
+}
 
 function loadProject (ver) {
     var elementExists = !!document.getElementById("player");
@@ -9,7 +30,7 @@ function loadProject (ver) {
         iframe = document.createElement("iframe");
     
         iframe.setAttribute("id","player")
-        iframe.width = 499
+        iframe.width = 495
         iframe.height = 416
         iframe.setAttribute("allowtransparency","true")
         iframe.setAttribute("frameborder",0)

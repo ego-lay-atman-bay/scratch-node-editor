@@ -3,11 +3,11 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html lang="en-us">
+<html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Node Editor</title>
+        <title>st</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
@@ -17,28 +17,34 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         
-        <script src="scripts.js" async defer></script>
         <script src="select.js" async defer></script>
 
-        <h1>Node Editor</h1>
-        <div id="project" class="node">
-            <hr class="thin_hrm">
-        </div>
-        <label id="">Version</label>
-        <select id="ver-selector" onchange="loadProject(this.value)">
-            <option value="2.2">2.2</option>
-            <option value="beta">beta</option>
-        </select>
         <div class="select-wrapper">
             <div class="select">
-                <div class="select__trigger" onchange="loadProject(this.value)"><span>2.2</span>
+                <div class="select__trigger"><span>Tesla</span>
                     <div class="arrow"></div>
                 </div>
                 <div class="custom-options">
-                    <span class="custom-option selected" value="2.2">2.2</span>
-                    <span class="custom-option" value="beta">beta</span>
+                    <span class="custom-option selected" data-value="tesla">Tesla</span>
+                    <span class="custom-option" data-value="volvo">Volvo</span>
+                    <span class="custom-option" data-value="mercedes">Mercedes</span>
                 </div>
             </div>
         </div>
+
+        
+        <div class="select-wrapper">
+            <div class="select">
+                <div class="select__trigger"><span>Tesla</span>
+                    <div class="arrow"></div>
+                </div>
+                <div class="custom-options">
+                    <span class="custom-option selected" data-value="tesla">Tesla</span>
+                    <span class="custom-option" data-value="volvo">Volvo</span>
+                    <span class="custom-option" data-value="mercedes">Mercedes</span>
+                </div>
+            </div>
+        </div>
+        
     </body>
 </html>
