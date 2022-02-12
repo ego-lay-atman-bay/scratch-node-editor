@@ -1,3 +1,13 @@
+function triggerOnchange (element) {
+    if ("createEvent" in document) {
+        var evt = document.createEvent("HTMLEvents");
+        evt.initEvent("change", false, true);
+        element.dispatchEvent(evt);
+    }
+    else
+        element.fireEvent("onchange");
+}
+
 document.querySelector('.select-wrapper').addEventListener('click', function() {
     this.querySelector('.select').classList.toggle('open');
 })
@@ -7,7 +17,11 @@ for (const option of document.querySelectorAll(".custom-option")) {
         if (!this.classList.contains('selected')) {
             this.parentNode.querySelector('.custom-option.selected').classList.remove('selected');
             this.classList.add('selected');
-            this.closest('.select').querySelector('.select__trigger span').textContent = this.textContent;
+            const element = this.closest('.select').querySelector('.select__trigger span')
+            element.setAttribute('value',this.getAttribute('value'))
+            element.textContent = this.textContent;
+            console.log(this.getAttribute('value'))
+            triggerOnchange(element);
         }
     })
 }
