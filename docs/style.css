@@ -8,17 +8,9 @@ body {
     width: 500px;
     margin: 24px auto 0;
 
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'parabolic', Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-}
-
-h1 {
-    color:#848484;
-    border-style: solid;
-    border-color:#848484;
-    border-width: 3px;
-    background-color: #484848;
 }
 
 .node {
@@ -27,6 +19,7 @@ h1 {
     border-color:#848484;
     border-width: 3px;
     background-color: #484848;
+    margin: 0;
 }
 
 .thin_hr {
