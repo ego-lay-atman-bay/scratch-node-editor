@@ -22,16 +22,6 @@ body {
     margin: 0;
 }
 
-.thin_hr {
-    margin-top:0;
-    margin-bottom:0;
-    border:0;
-    height:2px;
-    background-color: #848484;
-    position: relative;
-    top: 45px;
-}
-
 ol, ul {
     list-style: none;
 }
