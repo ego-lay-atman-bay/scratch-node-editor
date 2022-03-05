@@ -8,8 +8,8 @@ if (urlParams.has('version')) {
     version = urlParams.get('version')
     loadProject(version)
 } else {
-    document.body.onload = loadProject(2.2);
-    version = "2.2"
+    version = "2.3"
+    document.body.onload = loadProject(version);
 }
 
 var mySelect = document.getElementById('ver-selector');
