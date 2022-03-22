@@ -34,7 +34,8 @@ table {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 4px;
+    padding: 4px;
+    margin-bottom: 4px;
     font-size: 16px;
     font-weight: 300;
     color: #848484;
@@ -45,7 +46,6 @@ table {
     border-width: 2px;
     border-style: solid;
     border-color: #848484;
-    padding-right: 12px;
 
     user-select: none; /* supported by Chrome and Opera */
    -webkit-user-select: none; /* Safari */

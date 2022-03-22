@@ -22,9 +22,8 @@
         <script src="select.js" async defer></script>
 
         <h1 class="node-header">Node Editor</h1>
-        <div id="project" class="node">
-        </div>
-        <label id="">Version</label>
+        <div id="project" class="node-body">
+        <label id="version">Version</label>
         <div class="select-wrapper">
             <div class="select">
                 <div class="select__trigger"><span value="2.3" onChange="loadProject(this.getAttribute('value'))">2.3</span>
@@ -37,5 +36,45 @@
                 </div>
             </div>
         </div>
+        
+        </div>
+
+        <div id="instructions">
+            <h2 class="node-header">Instructions</h2>
+            <div class="node-body" id="instructions-text">
+                <p class="node-text">You can click and drag nodes around, you can drag outputs and connect them to inputs. You can also drag around the area by clicking and dragging the background. You can scroll up or down using the scroll wheel.</p>
+                <p class="node-text multiline">
+Keys:
+space = action (add node, import/export)
+0 = result
+1 = input
+8 = export
+9 = import
+r = delete node
+h = help
+z = show debug variables
+                </p>
+            </div>
+        </div>
+
+        <div id="credits">
+            <h2 class="node-header">Credits</h2>
+            <div class="node-body" id="credits-text">
+                <p class="node-text">-Thanks to @-Rex- for the Pen Text Engine++ https://scratch.mit.edu/projects/406678232/ and the font I used is here https://scratch.mit.edu/discuss/post/5830498/</p>
+                <p class="node-text">-The whole node editor engine was made completely by me. </p>
+                <p class="node-text">I made it in one sprite so people can just put the sprite in their backpack, and import it into their own projects. Please give credit if used. (not sure if anyone would even use it since the sprite has over 7,000 blocks...)</p>
+            </div>
+        </div>
+        <!-- <div id="update-log">
+            <h2 class="node-header">Update Log</h2>
+            <div class="node-body" id="update-log-text">
+                <p class="node-text">testv2.3: add check for later version in save code</p>
+                <p class="node-text">v2.2: add version to save code</p>
+                <p class="node-text">v2.1: added link to forum</p>
+                <p class="node-text"></p>
+                <p class="node-text"></p>
+                <p class="node-text"></p>
+            </div>
+        </div> -->
     </body>
 </html>

@@ -23,7 +23,6 @@ for(var i, j = 0; i = mySelect.options[j]; j++) {
 
 function loadProject (ver) {
     var elementExists = !!document.getElementById("player");
-
     var iframe
 
     if (!elementExists) {
@@ -53,5 +52,5 @@ function loadProject (ver) {
     iframe.setAttribute("src",url)
 
     const div = document.getElementById("project");
-    div.appendChild(iframe)
+    div.insertBefore(iframe, div.firstChild)
 }
