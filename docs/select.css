@@ -56,12 +56,10 @@ table {
 .custom-options {
     position: absolute;
     top: 100%;
-    border: 2px solid #848484;
-    background: #484848;
-    opacity: 0;
     visibility: hidden;
     pointer-events: none;
     z-index: 2;
+    padding-bottom: 2em;
     
     user-select: none; /* supported by Chrome and Opera */
    -webkit-user-select: none; /* Safari */
@@ -86,9 +84,11 @@ table {
     border-color: #848484;
     border-style: solid;
     border-width: 1.5px;
+    background-color: #484848;
 }
 .custom-option:hover {
     background-color: #616161;
+    cursor: pointer;
 }
 .custom-option.selected {
     color: #848484;
