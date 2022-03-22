@@ -31,11 +31,12 @@ body {
     border-color:#848484;
     border-width: 3px;
     background-color: #484848;
+    margin-bottom: 2em;
     margin-top: 0;
 }
 
 .node-header {
-    color:#848484;
+    color:rgb(132, 132, 132);
     border-style: solid;
     border-color:#848484;
     border-width: 3px;
