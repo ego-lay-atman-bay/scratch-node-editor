@@ -21,9 +21,34 @@ for(var i, j = 0; i = mySelect.options[j]; j++) {
     }
 }
 
+/**
+* Add a URL parameter (or changing it if it already exists)
+* @param {search} string  this is typically document.location.search
+* @param {key}    string  the key to set
+* @param {val}    string  value 
+*/
+var addUrlParam = function(search, key, val){
+    var newParam = key + '=' + val,
+        params = '?' + newParam;
+  
+    // If the "search" string exists, then build params from it
+    if (search) {
+      // Try to replace an existance instance
+      params = search.replace(new RegExp('([?&])' + key + '[^&]*'), '$1' + newParam);
+  
+      // If nothing was replaced, then add the new param to the end
+      if (params === search) {
+        params += '&' + newParam;
+      }
+    }
+  
+    return params;
+  };
+
 function loadProject (ver) {
     var elementExists = !!document.getElementById("player");
     var iframe
+
 
     if (!elementExists) {
         iframe = document.createElement("iframe");
@@ -53,4 +78,6 @@ function loadProject (ver) {
 
     const div = document.getElementById("project");
     div.insertBefore(iframe, div.firstChild)
+    
+    document.location.pathname + addUrlParam(document.location.search, 'version', ver);
 }
