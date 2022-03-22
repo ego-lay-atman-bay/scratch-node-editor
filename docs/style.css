@@ -47,9 +47,15 @@ body {
 }
 
 .node-text {
-    
     color:#848484;
     background-color: #484848;
+    margin: 3px;
+    text-align: left;
+}
+
+.node-link {
+    color:hsl(207, 20%, 50%);
+    text-decoration: none;
     margin: 3px;
     text-align: left;
 }
