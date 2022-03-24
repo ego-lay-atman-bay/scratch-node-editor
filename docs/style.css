@@ -59,3 +59,63 @@ body {
     margin: 3px;
     text-align: left;
 }
+
+.node-button {
+    width: fit-content;
+    padding: 2px;
+    margin: 0 4px;
+    display: inline;
+    color: #848484;
+    height: 21px;
+    background: #484848;
+    cursor: pointer;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #848484;
+    
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.node-button:hover {
+    background-color: #616161;
+}
+
+.node-button:active {
+    background-color: #595959;
+}
+
+.output {
+    float: right;
+}
+
+.input {
+    float: left;
+}
+
+.output-circle {
+    position: relative;
+    left: 100%;
+    bottom: 15px;
+    width: 10px;
+    height: 10px;
+    margin: 0;
+    shape-outside: circle();
+    clip-path: circle();
+    background: #848484;
+}
+
+.input-circle {
+    position: relative;
+    left: 100%;
+    bottom: 15px;
+    width: 10px;
+    height: 10px;
+    margin: 0;
+    shape-outside: circle();
+    clip-path: circle();
+    background: #848484;
+}

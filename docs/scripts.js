@@ -3,6 +3,7 @@ console.log(queryString);
 
 const urlParams = new URLSearchParams(queryString);
 
+var project_url
 var version
 if (urlParams.has('version')) {
     version = urlParams.get('version')
@@ -35,12 +36,12 @@ function loadProject (ver) {
 
     var url
     if (ver == "beta") {
-        url = "https://ego-lay-atman-bay.github.io/scratch-node-editor/beta/nodes.sb3"
+        project_url = "https://ego-lay-atman-bay.github.io/scratch-node-editor/beta/nodes.sb3"
     } else {
-        url = "https://ego-lay-atman-bay.github.io/scratch-node-editor/release/nodes v" + ver + ".sb3"
+        project_url = "https://ego-lay-atman-bay.github.io/scratch-node-editor/release/nodes v" + ver + ".sb3"
     }
 
-    url = "https://turbowarp.org/414716080/embed?project_url=" + url
+    url = "https://turbowarp.org/414716080/embed?project_url=" + project_url
     iframe.setAttribute("src",url)
 
     const div = document.getElementById("project");

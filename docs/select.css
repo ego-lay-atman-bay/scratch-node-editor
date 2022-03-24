@@ -28,6 +28,11 @@ table {
 .select__trigger:hover {
     background-color: #616161;
 }
+
+.select__trigger:active {
+    background-color: #595959;
+}
+
 .select__trigger {
     width: fit-content;
     position: relative;
@@ -90,6 +95,9 @@ table {
     background-color: #616161;
     cursor: pointer;
 }
+.custom-option:active {
+    background-color: #595959;
+}
 .custom-option.selected {
     color: #848484;
     background-color: #484848;
@@ -98,6 +106,10 @@ table {
 .custom-option.selected:hover {
     color: #848484;
     background-color: #616161;
+}
+
+.custom-option.selected:active {
+    background-color: #595959;
 }
 
 *, *:after, *:before {
