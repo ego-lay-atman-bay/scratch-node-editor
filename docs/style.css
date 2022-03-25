@@ -21,6 +21,10 @@ body {
     line-height: 1;
 }
 
+.dark-mode {
+    background-color: #343434;
+}
+
 .multiline {
     white-space: pre-wrap;
 }
@@ -118,4 +122,9 @@ body {
     shape-outside: circle();
     clip-path: circle();
     background: #848484;
+}
+
+.fixed {
+    position: fixed;
+    left: 50px;
 }

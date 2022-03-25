@@ -47,3 +47,8 @@ function loadProject (ver) {
     const div = document.getElementById("project");
     div.insertBefore(iframe, div.firstChild)
 }
+
+function switchTheme() {
+    var body = document.body;
+    body.classList.toggle('dark-mode');
+}
