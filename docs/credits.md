@@ -1,5 +1,5 @@
--Thanks to @-Rex- for Stamp Font Engine ++
--I used the Work Sans https://weiweihuanghuang.github.io/Work-Sans/ font created by Wei Huang
+-Thanks to <a href="https://scratch.mit.edu/users/-Rex-/" class="node-link">@-Rex-</a> for <a href="https://scratch.mit.edu/projects/589579521/" class="node-link">Stamp Font Engine ++</a>
+-I used the <a href="https://weiweihuanghuang.github.io/Work-Sans/" class="node-link">Work Sans</a> font created by <a href="https://weiweihuanghuang.github.io/" class="node-link">Wei Huang</a>
 -Thanks to windows 10 for the normal, hand, move and beam cursors (names of the costumes). 
 -I traced the grab and drag ones myself, using refrence images though (couldn't find them in windows).
 -The whole node editor engine was made completely by me.

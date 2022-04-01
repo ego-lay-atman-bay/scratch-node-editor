@@ -52,3 +52,15 @@ function switchTheme() {
     var body = document.body;
     body.classList.toggle('dark-mode');
 }
+
+function loadDoc(file, element) {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+      element.innerHTML =
+      this.responseText;
+    }
+    xhttp.open("GET", file);
+    xhttp.send();
+}
+
+loadDoc("credits.md",document.getElementById("credits-text"))
