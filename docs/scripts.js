@@ -9,7 +9,7 @@ if (urlParams.has('version')) {
     version = urlParams.get('version')
     loadProject(version)
 } else {
-    version = "2.3"
+    version = "3.0"
     document.body.onload = loadProject(version);
 }
 
