@@ -25,26 +25,44 @@
 
         <h1 class="node-header">Node Editor</h1>
         <div id="project" class="node-body">
-        <label>Version</label>
-        <div class="select-wrapper">
-            <div class="select">
-                <div class="select__trigger"><span value="3.0" onChange="loadProject(this.getAttribute('value'))">3.0</span>
-                    <div class="arrow"></div>
+                
+            <div class="node-vals-container">
+                <div class="output-list">
+                    <div class="input">
+                        <label class="node-text">Version</label>
+                        <div class="select-wrapper">
+                            <div class="select">
+                                <div class="select__trigger"><span value="3.0" onChange="loadProject(this.getAttribute('value'))">3.0</span>
+                                    <div class="arrow"></div>
+                                </div>
+                                <div class="custom-options">
+                                    <span class="custom-option selected" value="3.0">3.0</span>
+                                    <span class="custom-option" value="beta">dev</span>
+                                    <span class="custom-option" value="2.3">2.3</span>
+                                    <span class="custom-option" value="2.2">2.2</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-circle"></div>
+                    </div>
+                    
                 </div>
-                <div class="custom-options">
-                    <span class="custom-option selected" value="3.0">3.0</span>
-                    <span class="custom-option" value="beta">dev</span>
-                    <span class="custom-option" value="2.3">2.3</span>
-                    <span class="custom-option" value="2.2">2.2</span>
+                
+                <div class="output-list">
+                    <div class="output">
+                        <button class="turbowarp node-button" title="TurboWarp" onclick="window.open('https://turbowarp.org/?project_url=' + project_url, '_blank');">Open in turbowarp</button>
+                    
+                        <div class="output-circle"></div>
+                    </div>
+                    <div class="output">
+                        <button id="mouse" value="1" class="node-button" onclick="toggleMouseHandler()">Show mouse</button>
+                    
+                        <div class="output-circle"></div>
+                    </div>
                 </div>
             </div>
         </div>
-        
-        <div class="output">
-            <button class="turbowarp node-button" title="TurboWarp" onclick="window.open('https://turbowarp.org/?project_url=' + project_url, '_blank');">Open in turbowarp</button>
-        </div>
-        
-        </div>
+
 
 
         <div id="instructions">

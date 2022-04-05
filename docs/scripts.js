@@ -5,12 +5,19 @@ const urlParams = new URLSearchParams(queryString);
 
 var project_url
 var version
+
 if (urlParams.has('version')) {
     version = urlParams.get('version')
     loadProject(version)
 } else {
-    version = "3.0"
-    document.body.onload = loadProject(version);
+    fetch('version.txt')
+    .then(response => response.text())
+    .then(data => {
+  	// Do something with your data
+      console.log(data)
+      version = data;
+      document.body.onload = loadProject(version);
+  });
 }
 
 function loadProject (ver) {
@@ -41,7 +48,7 @@ function loadProject (ver) {
         project_url = "https://ego-lay-atman-bay.github.io/scratch-node-editor/release/nodes v" + ver + ".sb3"
     }
 
-    url = "https://turbowarp.org/414716080/embed?project_url=" + project_url
+    url = "./turbowarp/index.html?version=" + ver
     iframe.setAttribute("src",url)
 
     const div = document.getElementById("project");
@@ -53,14 +60,32 @@ function switchTheme() {
     body.classList.toggle('dark-mode');
 }
 
-function loadDoc(file, element) {
-    const xhttp = new XMLHttpRequest();
+function loadDoc(file, element) {const xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
-      element.innerHTML =
-      this.responseText;
+        element.innerHTML = 
+        this.responseText;
     }
     xhttp.open("GET", file);
     xhttp.send();
 }
 
 loadDoc("credits.md",document.getElementById("credits-text"))
+
+function toggleMouse() {
+    var iframe = document.getElementById('player');
+    var canvas = iframe.contentWindow.document.querySelector('.sc-canvas');
+    canvas.classList.toggle('cur-normal');
+}
+
+function toggleMouseHandler() {
+    var element = document.getElementById("mouse");
+    if (element.value == 0) {
+        element.innerHTML = "Show mouse"
+        element.value = 1
+        toggleMouse()
+    } else {
+        element.innerHTML = "Hide mouse"
+        element.value = 0
+        toggleMouse()
+    }
+}

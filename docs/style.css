@@ -37,6 +37,7 @@ body {
     background-color: #484848;
     margin-bottom: 2em;
     margin-top: 0;
+    height:auto;
 }
 
 .node-header {
@@ -92,36 +93,58 @@ body {
     background-color: #595959;
 }
 
-.output {
-    float: right;
+.input {
+    position: relative;
+    display: flex;
+    justify-content: left;
+    margin: 2px 0;
+    height: 22px;
 }
 
-.input {
-    float: left;
+.output {
+    position: relative;
+    display: flex;
+    justify-content: right;
+    margin: 2px 0;
+    height: 22px;
 }
+
+.input-list {
+    flex: 1;
+    width: 50%;
+}
+
+.output-list {
+    flex: 1;
+    width: 50%;
+}
+
+.node-vals-container {
+    display: flex;
+}
+
+
 
 .output-circle {
-    position: relative;
+    position: absolute;
     left: 100%;
-    bottom: 15px;
+    top: 25%;
     width: 10px;
     height: 10px;
     margin: 0;
-    shape-outside: circle();
     clip-path: circle();
-    background: #848484;
+    background: #a2a2a2;
 }
 
 .input-circle {
-    position: relative;
-    left: 100%;
-    bottom: 15px;
+    position: absolute;
+    right: 100%;
+    top: 25%;
     width: 10px;
     height: 10px;
     margin: 0;
-    shape-outside: circle();
     clip-path: circle();
-    background: #848484;
+    background: #a2a2a2;
 }
 
 .fixed {
