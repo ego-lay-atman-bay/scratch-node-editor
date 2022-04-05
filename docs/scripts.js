@@ -71,9 +71,6 @@ function loadDoc(file, element) {const xhttp = new XMLHttpRequest();
 
 loadDoc("credits.md",document.getElementById("credits-text"))
 
-const iframe = document.getElementById('player');
-const canvas = iframe.contentWindow.document.querySelector('.sc-canvas');
-
 function toggleMouse() {
     var iframe = document.getElementById('player');
     var canvas = iframe.contentWindow.document.querySelector('.sc-canvas');
@@ -81,7 +78,6 @@ function toggleMouse() {
 }
 
 function toggleMouseHandler() {
-    toggleMouse();
     var iframe = document.getElementById('player');
     var canvas = iframe.contentWindow.document.querySelector('.sc-canvas');
     var element = document.getElementById("toggle-mouse");
@@ -91,4 +87,5 @@ function toggleMouseHandler() {
     } else {
         element.innerHTML = "Hide mouse"
     }
+    toggleMouse();
 }
