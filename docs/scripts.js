@@ -6,11 +6,13 @@ const urlParams = new URLSearchParams(queryString);
 var project_url
 var version
 
+var iframe = document.getElementById("player");
+
 if (urlParams.has('version')) {
     version = urlParams.get('version')
     loadProject(version)
 } else {
-    fetch('version.txt')
+    fetch('assets/version.txt')
     .then(response => response.text())
     .then(data => {
   	// Do something with your data
@@ -69,12 +71,13 @@ function loadDoc(file, element) {const xhttp = new XMLHttpRequest();
     xhttp.send();
 }
 
-loadDoc("credits.md",document.getElementById("credits-text"))
+loadDoc("assets/credits.md",document.getElementById("credits-text"))
 
 function toggleMouse() {
     var iframe = document.getElementById('player');
     var canvas = iframe.contentWindow.document.querySelector('.sc-canvas');
     canvas.classList.toggle('cur-normal');
+    iframe.classList.classList = canvas.classList
 }
 
 function toggleMouseHandler() {
@@ -89,3 +92,24 @@ function toggleMouseHandler() {
     }
     toggleMouse();
 }
+
+const options = {
+  class: 'cur-normal'
+}
+
+function callback(mutationList, observer) {
+  mutationList.forEach(function(mutation) {
+    if (mutation.type === 'class' && mutation.attributeName === 'cur-normal') {
+      // handle class change
+      var btn = document.getElementById("toggle-mouse");
+      if (canvas.classList.contains('cur-normal')) {
+        btn.innerHTML = "Show mouse"
+      } else {
+        element.innerHTML = "Hide mouse"
+      }
+    }
+  })
+}
+
+const observer = new MutationObserver(callback)
+observer.observe(iframe, options)

@@ -118,7 +118,7 @@ table {
 
 .arrow {
     position: relative;
-    background-image: url(./assets/triangle.svg);
+    background-image: url(triangle.svg);
     width: 0.8em;
     height: 8.438px;
     left: 5px;
