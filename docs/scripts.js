@@ -71,6 +71,9 @@ function loadDoc(file, element) {const xhttp = new XMLHttpRequest();
 
 loadDoc("credits.md",document.getElementById("credits-text"))
 
+const iframe = document.getElementById('player');
+const canvas = iframe.contentWindow.document.querySelector('.sc-canvas');
+
 function toggleMouse() {
     var iframe = document.getElementById('player');
     var canvas = iframe.contentWindow.document.querySelector('.sc-canvas');
@@ -78,14 +81,14 @@ function toggleMouse() {
 }
 
 function toggleMouseHandler() {
-    var element = document.getElementById("mouse");
-    if (element.value == 0) {
+    toggleMouse();
+    var iframe = document.getElementById('player');
+    var canvas = iframe.contentWindow.document.querySelector('.sc-canvas');
+    var element = document.getElementById("toggle-mouse");
+    console.log(canvas.classList.contains('cur-normal'));
+    if (canvas.classList.contains('cur-normal')) {
         element.innerHTML = "Show mouse"
-        element.value = 1
-        toggleMouse()
     } else {
         element.innerHTML = "Hide mouse"
-        element.value = 0
-        toggleMouse()
     }
 }
