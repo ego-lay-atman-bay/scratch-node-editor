@@ -92,24 +92,3 @@ function toggleMouseHandler() {
     }
     toggleMouse();
 }
-
-const options = {
-  class: 'cur-normal'
-}
-
-function callback(mutationList, observer) {
-  mutationList.forEach(function(mutation) {
-    if (mutation.type === 'class' && mutation.attributeName === 'cur-normal') {
-      // handle class change
-      var btn = document.getElementById("toggle-mouse");
-      if (canvas.classList.contains('cur-normal')) {
-        btn.innerHTML = "Show mouse"
-      } else {
-        element.innerHTML = "Hide mouse"
-      }
-    }
-  })
-}
-
-const observer = new MutationObserver(callback)
-observer.observe(iframe, options)
