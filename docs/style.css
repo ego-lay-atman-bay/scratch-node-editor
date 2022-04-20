@@ -96,7 +96,7 @@ body {
 .input {
     position: relative;
     display: flex;
-    justify-content: left;
+    justify-content: flex-start;
     margin: 2px 0;
     height: 22px;
 }
