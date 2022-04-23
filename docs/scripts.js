@@ -53,7 +53,7 @@ function loadProject (ver) {
     url = "./turbowarp/index.html?version=" + ver
     iframe.setAttribute("src",url)
 
-    const div = document.getElementById("project");
+    const div = document.getElementById("project-container");
     div.insertBefore(iframe, div.firstChild)
 }
 
@@ -92,3 +92,4 @@ function toggleMouseHandler() {
     }
     toggleMouse();
 }
+
