@@ -38,6 +38,8 @@ body {
     margin-bottom: 2em;
     margin-top: 0;
     height:auto;
+    border-bottom-left-radius: 1.5px;
+    border-bottom-right-radius: 1.5px;
 }
 
 .node-header {
@@ -49,6 +51,8 @@ body {
     background-color: #484848;
     margin-bottom: 0;
     text-align: center;
+    border-top-left-radius: 1.5px;
+    border-top-right-radius: 1.5px;
 }
 
 .node-text {
@@ -77,6 +81,7 @@ body {
     border-width: 2px;
     border-style: solid;
     border-color: #848484;
+    border-radius: 1.5px;
     
     user-select: none; /* supported by Chrome and Opera */
    -webkit-user-select: none; /* Safari */

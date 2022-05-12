@@ -51,6 +51,7 @@ table {
     border-width: 2px;
     border-style: solid;
     border-color: #848484;
+    border-radius: 1.5px;
 
     user-select: none; /* supported by Chrome and Opera */
    -webkit-user-select: none; /* Safari */
