@@ -75,10 +75,10 @@ body {
     margin: 0 4px;
     display: inline;
     color: #848484;
-    height: 21px;
+    height: 22px;
     background: #484848;
     cursor: pointer;
-    border-width: 2px;
+    border-width: 3px;
     border-style: solid;
     border-color: #848484;
     border-radius: 1.5px;
