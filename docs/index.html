@@ -12,16 +12,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="assets/select.css"
+        <link rel="stylesheet" href="assets/select.css">
+        <link rel="stylesheet" href="/navbar/navbar.css">
+        <script src="/assets/jquery-3.6.0.min.js"></script>
+
     </head>
     <body class="dark-mode">
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         
+        <script src="/navbar/navbar.js"></script>
+
+        <div id="navbar"></div>
+        
         <script src="scripts.js" async defer></script>
         <script src="assets/select.js" async defer></script>
 
+        <div id="content">
         <!-- <button class="node-button fixed" title="Switch to light theme" onclick="switchTheme()">Switch to light theme</button> -->
 
         <h1 class="node-header">Node Editor</h1>
@@ -110,6 +118,7 @@ z = show debug variables</p>
                 <p class="node-text">You can also report issues <a href="https://github.com/ego-lay-atman-bay/scratch-node-editor/issues" class="node-link">on GitHub</a>.</p>
                 <p class="node-text">Please do not report any issues with the beta version (unless the issue isn't in plain sight).</p>
             </div>
+        </div>
         </div>
     </body>
 </html>
