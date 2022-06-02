@@ -10,7 +10,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 @font-face {
     font-family: WorkSans-Regular;
-    src: url(./assets/WorkSans-Regular.ttf);
+    src: url(/assets/fonts/WorkSans-Regular.ttf);
 }
 #content {
     width: 500px;
