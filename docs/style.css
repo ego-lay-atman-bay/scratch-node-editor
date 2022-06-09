@@ -71,10 +71,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 .node-button {
+    display: flex;
     width: fit-content;
     padding: 2px;
     margin: 0 4px;
-    display: inline;
     color: #848484;
     height: 22px;
     background: #484848;
@@ -83,6 +83,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     border-style: solid;
     border-color: #848484;
     border-radius: 1.5px;
+    align-items: center;
     
     user-select: none; /* supported by Chrome and Opera */
    -webkit-user-select: none; /* Safari */
