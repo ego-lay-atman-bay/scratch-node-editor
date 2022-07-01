@@ -92,4 +92,3 @@ function toggleMouseHandler() {
     }
     toggleMouse();
 }
-

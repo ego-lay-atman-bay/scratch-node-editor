@@ -15,14 +15,14 @@ Here's what each input is for (options with * are not required)
     - The title of the node (top text). (any text)
 - inputs/outputs: The inputs/outputs of the node
   - value
-    Each input/output is seperated by a semi-colon (;), and you can set an input/output type by putting it in brakets. For example
+    Each input/output is separated by a semi-colon (;), and you can set an input/output type by putting it in brakets. For example
 	[code]
 	input-1;editable input[edit]
     [/code]
 	Makes 2 inputs/outputs, the first one, nothing special.
 	The second one is an input you can edit.
 	
-	You can also use curly brakets {} to make a default value. For example,
+	You can also use curly brackets {} to make a default value. For example,
 	[code]
 	input-1[edit]{default}
 	[/code]
